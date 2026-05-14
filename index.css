@@ -1,0 +1,312 @@
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#111;
+    color:white;
+
+    /* Делаем сайт на всю высоту экрана */
+    min-height:100vh;
+
+    /* Включаем flex */
+    display:flex;
+    flex-direction:column;
+    /* Всегда показываем место под scrollbar */
+    overflow-y:scroll;
+}
+
+/* Шапка */
+header{
+    position:relative;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 50px;
+
+    background:#1b1b1b;
+}
+
+/* Ссылки меню */
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+
+    transition:0.3s;
+}
+
+/* Эффект при наведении */
+nav a:hover{
+    color:#00bfff;
+}
+
+/* Главный блок */
+.hero{
+    text-align:center;
+
+    padding:120px 20px;
+
+   
+    
+}
+
+/* Основной контент */
+main{
+    flex:1;
+}
+
+/* Заголовок */
+.hero h2{
+    font-size:48px;
+}
+
+/* Текст */
+.hero p{
+    max-width:700px;
+    margin:auto;
+
+    font-size:20px;
+    line-height:1.6;
+}
+
+/* Кнопка */
+.btn{
+    display:inline-block;
+
+    margin-top:30px;
+    padding:15px 30px;
+
+    background:#00bfff;
+    color:white;
+
+    text-decoration:none;
+    border-radius:10px;
+
+    transition:0.3s;
+}
+
+/* Наведение на кнопку */
+.btn:hover{
+    background:#008ecc;
+}
+
+/* Подвал */
+footer{
+    text-align:center;
+    padding:20px;
+
+    background:#1b1b1b;
+}
+
+
+/* =========================
+КНОПКА ТЕМЫ
+========================= */
+
+#theme-toggle{
+
+    /* Абсолютное положение */
+    position:absolute;
+
+    /* Положение справа */
+    right:450px;
+
+    /* Центрируем по высоте */
+    top:50%;
+
+    transform:translateY(-50%);
+
+    /* Размер */
+    width:35px;
+    height:35px;
+
+    /* Убираем рамку */
+    border:none;
+
+    /* Круг */
+    border-radius:50%;
+
+    /* Курсор */
+    cursor:pointer;
+
+    /* Размер иконки */
+    font-size:16px;
+
+    /* Цвет */
+    background:#00bfff;
+    color:white;
+
+    transition:0.3s;
+}
+
+/* Наведение */
+#theme-toggle:hover{
+
+    background:#009acd;
+
+    transform:
+    translateY(-50%)
+    scale(1.1);
+}
+
+/* =========================
+СВЕТЛАЯ ТЕМА
+========================= */
+
+.light-theme{
+
+    background:white !important;
+
+    color:#111 !important;
+}
+
+/* Header */
+.light-theme header{
+
+    background:#f0f0f0 !important;
+}
+
+/* Footer */
+.light-theme footer{
+
+    background:#f0f0f0 !important;
+
+    color:#111;
+}
+
+/* Карточки */
+.light-theme .card,
+.light-theme .item,
+.light-theme .person-card{
+
+    background:#ffffff !important;
+
+    color:#111 !important;
+
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Текст */
+.light-theme p,
+.light-theme h1,
+.light-theme h2,
+.light-theme h3{
+
+    color:#111 !important;
+}
+
+/* Меню */
+.light-theme nav a{
+
+    color:#111 !important;
+}
+
+/* Наведение */
+.light-theme nav a:hover{
+
+    color:#00bfff !important;
+}
+
+/* =========================
+ФИГУРЫ НА ФОНЕ
+========================= */
+
+/* Контейнер фигур */
+.shapes{
+
+    /* Фиксируем на весь экран */
+    position:fixed;
+
+    width:100%;
+    height:100%;
+
+    top:0;
+    left:0;
+
+    /* Чтобы фигуры были на фоне */
+    z-index:-1;
+
+    overflow:hidden;
+}
+
+/* ОБЩИЕ СТИЛИ ФИГУР */
+.shape{
+
+    position:absolute;
+
+    transition:0.4s;
+}
+
+/* =========================
+КРУГ
+========================= */
+
+.circle{
+
+    width:120px;
+    height:120px;
+
+    border-radius:50%;
+
+    background:#00bfff;
+
+    /* Положение */
+    top:100px;
+    left:100px;
+}
+
+
+
+
+/* =========================
+КВАДРАТ
+========================= */
+
+.square{
+
+    width:100px;
+    height:100px;
+
+    background:#ff00ff;
+
+    top:300px;
+    right:200px;
+
+    transform:rotate(20deg);
+}
+
+/* =========================
+ТРЕУГОЛЬНИК
+========================= */
+
+.triangle{
+
+    width:0;
+    height:0;
+
+    border-left:60px solid transparent;
+    border-right:60px solid transparent;
+
+    border-bottom:120px solid #00ff99;
+
+    bottom:100px;
+    left:40%;
+}
+
+
+/* =========================
+ВТОРОЙ КРУГ
+========================= */
+
+.two{
+
+    width:80px;
+    height:80px;
+
+    top:500px;
+    left:75%;
+
+    background:#ffaa00;
+}
