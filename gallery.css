@@ -1,0 +1,218 @@
+
+
+/* Основные настройки */
+body{
+    margin:0;
+    background:#121212;
+    color:white;
+    font-family:Arial;
+
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+
+    overflow-y:scroll;
+}
+
+/* Шапка */
+header{
+    position:relative;
+
+    background:#1d1d1d;
+
+    padding:20px 50px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* Меню */
+nav a{
+    color:white;
+    margin-left:20px;
+    text-decoration:none;
+
+    transition:0.3s;
+}
+
+/* Наведение */
+nav a:hover{
+    color:#00bfff;
+}
+
+/* Основной контент */
+main{
+    flex:1;
+}
+
+/* Сетка галереи */
+.gallery{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(320px,1fr));
+
+    gap:30px;
+
+    padding:50px;
+}
+
+/* Одна карточка */
+.item{
+    background:#1e1e1e;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    text-decoration:none;
+
+    transition:0.3s;
+}
+
+/* Эффект */
+.item:hover{
+    transform:translateY(-10px);
+
+    background:#262626;
+}
+
+/* Картинка */
+.item img{
+    width:100%;
+    height:250px;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+/* Подпись */
+.caption{
+    padding:20px;
+
+    text-align:center;
+
+    font-size:22px;
+
+    color:#00bfff;
+}
+
+/* Подвал */
+footer{
+    text-align:center;
+
+    padding:20px;
+
+    background:#1b1b1b;
+}
+
+/* =========================
+КНОПКА ТЕМЫ
+========================= */
+
+#theme-toggle{
+
+    /* Абсолютное положение */
+    position:absolute;
+
+    /* Положение справа */
+    right:450px;
+
+    /* Центрируем по высоте */
+    top:50%;
+
+    transform:translateY(-50%);
+
+    /* Размер */
+    width:35px;
+    height:35px;
+
+    /* Убираем рамку */
+    border:none;
+
+    /* Круг */
+    border-radius:50%;
+
+    /* Курсор */
+    cursor:pointer;
+
+    /* Размер иконки */
+    font-size:16px;
+
+    /* Цвет */
+    background:#00bfff;
+    color:white;
+
+    transition:0.3s;
+}
+
+/* Наведение */
+#theme-toggle:hover{
+
+    background:#009acd;
+
+    transform:
+    translateY(-50%)
+    scale(1.1);
+}
+
+/* =========================
+СВЕТЛАЯ ТЕМА
+========================= */
+
+.light-theme{
+
+    background:white !important;
+
+    color:#111 !important;
+}
+
+/* Header */
+.light-theme header{
+
+    background:#f0f0f0 !important;
+}
+
+/* Footer */
+.light-theme footer{
+
+    background:#f0f0f0 !important;
+
+    color:#111;
+}
+
+/* Карточки */
+.light-theme .card,
+.light-theme .item,
+.light-theme .person-card{
+
+    background:#ffffff !important;
+
+    color:#111 !important;
+
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Текст */
+.light-theme p,
+.light-theme h1,
+.light-theme h2,
+.light-theme h3{
+
+    color:#111 !important;
+}
+
+/* Меню */
+.light-theme nav a{
+
+    color:#111 !important;
+}
+
+/* Наведение */
+.light-theme nav a:hover{
+
+    color:#00bfff !important;
+}
